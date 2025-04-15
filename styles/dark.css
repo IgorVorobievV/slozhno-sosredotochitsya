@@ -3,10 +3,52 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --color: #f1b2ce;
+  --accent-color: #db00ff;
+  --bg-color: #ff0070;
+  background-image: url(../images/cover-image-dark.png);
+  & .header,
+  & .footer {
+    color: var(--bg-color);
+  }
+  & .header__theme-menu-button_active {
+    color: var(--bg-color);
+    border-color: var(--bg-color);
+  }
+  & .header__theme-menu-button:hover {
+    border-color: #ff007066;
+  }
+  & .header-decor {
+    position: absolute;
+    top: var(--padding);
+    right: var(--padding);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-inline-end: 9px;
+    line-height: calc(25 / 18);
+  }
+  & .header-decor::before {
+    content: "REC";
+  }
+  & .header-decor::after {
+    content: "";
+    display: inline-flex;
+    inline-size: 0.5rem;
+    block-size: 0.5rem;
+    border-radius: 50%;
+    background: var(--bg-color);
+    box-shadow: 0 0 4px 2px var(--bg-color);
+  }
+  & .header__title,
+  & .footer__title {
+    color: var(--accent-color);
+  }
+  & .title-decor {
+    color: #000028;
+  }
+  & .section__title {
+    color: var(--bg-color);
+  }
 }
