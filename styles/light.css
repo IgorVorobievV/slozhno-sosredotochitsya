@@ -1,59 +1,50 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
+:root.theme-light {
+  /*рекомендованная схема, но не работает*/
+  --color: #353430;
+  --accent-color: #ffc2e6;
+  --bg-color: #fff1f7;
+  --accent-bg-color: #ff8dcb;
+}
 .page.theme_light {
   --color: #353430;
   --accent-color: #ffc2e6;
-  --bg-color: #ff8dcb;
+  --bg-color: #fff1f7;
+  --accent-bg-color: #ff8dcb;
   background-image: url(../images/cover-image-light.png);
-
-  & .header__theme-menu-button:hover {
-    border-color: #35343066;
+  & .header,
+  & .footer,
+  & .title-decor,
+  & .section__title {
+    color: var(--color);
   }
   & .header-decor {
     display: none;
   }
-  & .header__theme-menu-button_active {
-    color: var(--color);
-    border-color: var(--color);
-  }
-  & .header__title,
-  & .footer__title {
-    color: var(--accent-color);
-  }
-  & .header__title.text-hadow,
-  & .footer__title.text-hadow {
-    text-shadow: 4px 4px 0 #ff0070;
+  & .header__theme-menu-button:hover {
+    border-color: #35343066;
   }
 }
 
 @media (prefers-color-scheme: light) {
-  .page.theme_auto {
+  :root {
     --color: #353430;
     --accent-color: #ffc2e6;
-    --bg-color: #ff8dcb;
+    --bg-color: #fff1f7;
+    --accent-bg-color: #ff8dcb;
+  }
+  .page {
     background-image: url(../images/cover-image-light.png);
-
-    & .header__theme-menu-button:hover {
-      border-color: #35343066;
+    & .header,
+    & .footer,
+    & .title-decor,
+    & .section__title {
+      color: var(--color);
     }
     & .header-decor {
       display: none;
     }
-    & .header__theme-menu-button_active {
-      color: var(--color);
-      border-color: var(--color);
-    }
-    & .header__title,
-    & .footer__title {
-      color: var(--accent-color);
-    }
-    & .header__title.text-hadow,
-    & .footer__title.text-hadow {
-      text-shadow: 4px 4px 0 #ff0070;
+    & .header__theme-menu-button:hover {
+      border-color: #35343066;
     }
   }
 }

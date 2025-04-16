@@ -1,54 +1,29 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+:root.theme-dark {
+  /*рекомендованная схема, но не работает*/
+  --color: #f1b2ce;
+  --accent-color: #db00ff;
+  --bg-color: #000028;
+  --accent-bg-color: #ff0070;
+}
 .page.theme_dark {
   --color: #f1b2ce;
   --accent-color: #db00ff;
-  --bg-color: #ff0070;
+  --bg-color: #000028;
+  --accent-bg-color: #ff0070;
   background-image: url(../images/cover-image-dark.png);
+
   & .header,
-  & .footer {
-    color: var(--bg-color);
+  & .footer,
+  & .section__title {
+    --color: var(--accent-bg-color);
   }
-  & .header__theme-menu-button_active {
-    color: var(--bg-color);
-    border-color: var(--bg-color);
+  & .header-decor {
+    display: flex;
   }
   & .header__theme-menu-button:hover {
     border-color: #ff007066;
   }
-  & .header-decor {
-    position: absolute;
-    top: var(--padding);
-    right: var(--padding);
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    padding-inline-end: 9px;
-    line-height: calc(25 / 18);
-  }
-  & .header-decor::before {
-    content: "REC";
-  }
-  & .header-decor::after {
-    content: "";
-    display: inline-flex;
-    inline-size: 0.5rem;
-    block-size: 0.5rem;
-    border-radius: 50%;
-    background: var(--bg-color);
-    box-shadow: 0 0 4px 2px var(--bg-color);
-  }
-  & .header__title,
-  & .footer__title {
-    color: var(--accent-color);
-  }
   & .title-decor {
-    color: #000028;
-  }
-  & .section__title {
     color: var(--bg-color);
   }
 }

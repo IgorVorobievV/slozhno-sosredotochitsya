@@ -44,14 +44,14 @@
           </li>
         </ul>
       </nav>
-      <h1 class="header__title text-hadow">no focus</h1>
+      <h1 class="header__title text-shadow">no focus</h1>
       <p class="title-decor">
         Что делать, когда не можешь делать ничего<br />
         Или почему нам так сложно сконцентрироваться, особенно когда очень надо
       </p>
     </header>
     <main class="main">
-      <section class="section section-columns">
+      <section class="section">
         <h2 class="section__title">Почему сосредоточиться так сложно</h2>
         <!--похоже нужны оболочки карточек-->
         <div class="section__content">
@@ -89,7 +89,7 @@
           </article>
         </div>
       </section>
-      <section class="section section-columns">
+      <section class="section">
         <h2 class="section__title">Что снижает концентрацию внимания?</h2>
         <div class="section__content section__content-fullwidth">
           <article class="card">
@@ -128,7 +128,7 @@
           </article>
         </div>
       </section>
-      <section class="section section-columns">
+      <section class="section">
         <h2 class="section__title">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
           секунд)
@@ -140,7 +140,7 @@
             </h3>
             <ul class="card__list">
               <li class="card__item">
-                <p class="title-decor">Представьте небо и облака</p>
+                <h4 class="title-decor">Представьте небо и облака</h4>
                 <p>
                   Или листья в ручье. Тут дело в лёгкой медитации, которая
                   помогает успокоиться. Ведь часто именно тревожные мысли о
@@ -154,7 +154,7 @@
                 </p>
               </li>
               <li class="card__item">
-                <p class="title-decor">Включите музыку</p>
+                <h4 class="title-decor">Включите музыку</h4>
                 <p>
                   Но не любую, и не любимую. Любимая может быть связана с
                   сильными положительными эмоциями, которые тоже очень сильно
@@ -164,7 +164,7 @@
                 </p>
               </li>
               <li class="card__item">
-                <p class="title-decor">Прогуляйтесь</p>
+                <h4 class="title-decor">Прогуляйтесь</h4>
                 <p>
                   Или даже пробегитесь. Лучше найти парк или лес: один
                   эксперимент
@@ -182,7 +182,7 @@
                 </p>
               </li>
               <li class="card__item">
-                <p class="title-decor">Хорошо ешьте</p>
+                <h4 class="title-decor">Хорошо ешьте</h4>
                 <p>
                   Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
                   которые препятствуют резким скачкам сахара в крови. Например,
@@ -192,7 +192,7 @@
                 </p>
               </li>
               <li class="card__item">
-                <p class="title-decor">Читайте</p>
+                <h4 class="title-decor">Читайте</h4>
                 <p>
                   Настоящие бумажные книги. Это правда помогает с концентрацией:
                   чтобы прочитать пост в соцсети, достаточно нескольких минут
@@ -206,42 +206,52 @@
       </section>
       <section class="section">
         <h3 class="title-decor">А можно в картинках?</h3>
-        <div class="gallery">
-          <img
-            class="gallery__item"
-            loading="lazy"
-            src="./images/sunset.png"
-            alt="Закат на фоне моря и гор. Совет 'Представьте небо и облака'"
-          />
-          <img
-            class="gallery__item"
-            loading="lazy"
-            src="./images/ice-cream.png"
-            alt="Мороженое в стиле аниме. Совет 'Хорошо ешьте'"
-          />
-          <img
-            class="gallery__item"
-            loading="lazy"
-            src="./images/tape.png"
-            alt="Аудиокассета. Совет 'Включите музыку'"
-          />
-          <img
-            class="gallery__item"
-            loading="lazy"
-            src="./images/books.png"
-            alt="Стопка книг. Совет 'Читайте'"
-          />
-          <img
-            class="gallery__item"
-            loading="lazy"
-            src="./images/street.png"
-            alt="Улица в парк. Совет 'Прогуляйтесь'"
-          />
-        </div>
+        <ul class="gallery__list">
+          <li class="gallery__item">
+            <img
+              class="gallery__img"
+              loading="lazy"
+              src="./images/sunset.png"
+              alt="Закат на фоне моря и гор. Совет 'Представьте небо и облака'"
+            />
+          </li>
+          <li class="gallery__item">
+            <img
+              class="gallery__img"
+              loading="lazy"
+              src="./images/ice-cream.png"
+              alt="Мороженое в стиле аниме. Совет 'Хорошо ешьте'"
+            />
+          </li>
+          <li class="gallery__item">
+            <img
+              class="gallery__img"
+              loading="lazy"
+              src="./images/tape.png"
+              alt="Аудиокассета. Совет 'Включите музыку'"
+            />
+          </li>
+          <li class="gallery__item">
+            <img
+              class="gallery__img"
+              loading="lazy"
+              src="./images/books.png"
+              alt="Стопка книг. Совет 'Читайте'"
+            />
+          </li>
+          <li class="gallery__item">
+            <img
+              class="gallery__img"
+              loading="lazy"
+              src="./images/street.png"
+              alt="Улица в парк. Совет 'Прогуляйтесь'"
+            />
+          </li>
+        </ul>
       </section>
     </main>
     <footer class="footer decorated-zone">
-      <p class="footer__title text-hadow">focus</p>
+      <p class="footer__title text-shadow">focus</p>
     </footer>
     <script src="./scripts/script.js"></script>
   </body>

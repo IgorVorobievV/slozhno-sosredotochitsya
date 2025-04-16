@@ -5,7 +5,8 @@
 :root {
   --color: #F1B2CE;
   --accent-color: #DB00FF;
-  --bg-color: #FF0070;
+  --bg-color: #000028;
+  --accent-bg-color: #FF0070;
   --padding: 10px;
 }
 
